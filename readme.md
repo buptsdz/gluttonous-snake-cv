@@ -16,11 +16,16 @@
 11添加连击音效  
   
 使用方法：  
-直接运行main即可  
+(1)不想下载源码的可以下载已经打包好的exe进行试玩  
+地址：https://pan.baidu.com/s/11Mm2TuCuImjdEX_mcRz86Q?pwd=4532  
+//python文件打包方法我也写了一个文档：  
+地址：https://www.yuque.com/u39067637/maezfz/qqm6xavvkp00blyb?singleDoc# 《使用pyinstaller打包conda虚拟环境下多文件的python程序》  
+(2)拉取源码运行  
 运行的话最好接电源，本项目吃cpu，不接电源cpu会降频  
 main是交互页面  
 sg是逻辑页面  
 requirements里是依赖包  
 cd 到requirements.txt所在目录下执行  
 pip install -r requirements.txt  
-记得修改源为国内源
+记得修改源为国内源  
+最后直接运行main即可  
