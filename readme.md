@@ -21,16 +21,16 @@
 //python文件打包方法我也写了一个文档：  
 地址：https://www.yuque.com/u39067637/maezfz/qqm6xavvkp00blyb?singleDoc# 《使用pyinstaller打包conda虚拟环境下多文件的python程序》  
 (2)拉取源码运行  
-运行的话最好接电源，本项目吃cpu，不接电源cpu会降频  
+运行的话最好接电源，本项目吃cpu，不接电源会降频  
 main是交互页面  
 sg是逻辑页面  
 requirements里是依赖包  
-cd 到requirements.txt所在目录下执行  
-pip install -r requirements.txt  
+cd 到requirements.txt所在目录下执行：pip install -r requirements.txt  
 记得修改源为国内源  
 最后直接运行main即可  
   
 玩法说明：  
+推荐打开声音玩（也算是个音游）
 运行main.py后，点击开始游戏，把手放在屏幕里面，就可以开始游戏了  
 你的食指会被识别为蛇头，确保同时只有一只手出现在屏幕里  
 尽可能吃到更多的食物，但是不要碰到蛇身。  
