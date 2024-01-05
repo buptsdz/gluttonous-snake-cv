@@ -15,8 +15,12 @@
 10添加开始时倒计时  
 11添加连击音效  
   
+游戏效果演示视频：  
+【元神，启动！（做了很久的opencv的贪吃蛇。。。勉强算个音游?）】  
+https://www.bilibili.com/video/BV1UP411C7YJ/?share_source=copy_web  
+  
 使用方法：  
-(1)不想下载源码的可以下载已经打包好的exe进行试玩  
+(1)下载已经打包好的exe游戏文件运行  
 地址：https://pan.baidu.com/s/1yi2Ml3Dc4KMgszh9VZLVAg?pwd=4532  
 //python文件打包方法我也写了一个文档：  
 地址：https://www.yuque.com/u39067637/maezfz/qqm6xavvkp00blyb?singleDoc# 《使用pyinstaller打包conda虚拟环境下多文件的python程序》  
@@ -33,5 +37,5 @@ cd 到requirements.txt所在目录下执行：pip install -r requirements.txt
 推荐打开声音玩（也算是个音游）
 运行main.py后，点击开始游戏，把手放在屏幕里面，就可以开始游戏了  
 你的食指会被识别为蛇头，确保同时只有一只手出现在屏幕里  
-尽可能吃到更多的食物，但是不要碰到蛇身。  
+尽可能吃到更多的食物，吃到东西会触发相应的音效。但是蛇头不要碰到蛇身。  
 
