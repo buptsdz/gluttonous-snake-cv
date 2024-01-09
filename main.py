@@ -22,7 +22,7 @@ beiyou_path=os.path.join(script_dir, "photos", "beiyou.png")
 cap = cv2.VideoCapture(0)
 cap.set(3, 1280)  # width
 cap.set(4, 800)  # height
-
+prev_frame_time = 0
 detector = HandDetector(detectionCon=0.7, maxHands=1)
 
 def close_window():
@@ -265,11 +265,21 @@ def show_start_screen():
     musics.playpagemusic()
 
 def update_game():
-    global update_flag
+    global update_flag,prev_frame_time
     if update_flag:
         success, img= cap.read()
         img = cv2.flip(img, 1)
-        hands, img = detector.findHands(img, flipType=False)
+        # 更新当前帧的时间
+        new_frame_time = time.time()
+
+        # 计算帧率
+        fps = 1 / (new_frame_time - prev_frame_time)
+        prev_frame_time = new_frame_time
+        fps = int(fps)
+
+        cv2.putText(img, f'FPS: {fps}', (1140, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (100, 255, 0), 2, cv2.LINE_AA)
+
+        hands = detector.findHands(img, flipType=False, draw=False)
         if hands:
             lmList = hands[0]['lmList']
             pointindex = lmList[8][0:2]
@@ -299,9 +309,17 @@ def countdown():
         success, img1 = cap.read()
         img1 = cv2.flip(img1, 1)
         hands, img1 = detector.findHands(img1, flipType=False)
+        if not hands:
+            # 如果没有检测到手，显示提示信息
+            text = "put your hand in the screen"
+            font_scale = 2
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            text_size = cv2.getTextSize(text, font, font_scale, 2)[0]
+            text_x = (img1.shape[1] - text_size[0]) // 2
+            text_y = (img1.shape[0] + text_size[1]) // 2
+            cv2.putText(img1, text, (text_x, text_y), font, font_scale, (255, 255, 255), 2)
         if hands and start_time == 0:
             start_time = time.time()
-
         if hands and start_time!=0:
             lmList = hands[0]['lmList']
             pointindex = lmList[8][0:2]
