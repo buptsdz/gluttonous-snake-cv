@@ -25,7 +25,7 @@ https://www.bilibili.com/video/BV1UP411C7YJ/?share_source=copy_web
 (1)下载已经打包好的exe游戏文件运行  
 地址：https://pan.baidu.com/s/1rw7uLH-ReM5BjVyY-mQTzw?pwd=1565   
 //python文件打包方法我也写了一个文档：  
-地址：https://www.yuque.com/u39067637/maezfz/qqm6xavvkp00blyb?singleDoc# 《使用pyinstaller打包conda虚拟环境下多文件的python程序》  
+https://www.yuque.com/u39067637/maezfz/qqm6xavvkp00blyb?singleDoc# 《使用pyinstaller打包conda虚拟环境下多文件的python程序》  
 
 (2)拉取源码运行  
 运行的话最好接电源，本项目吃cpu，不接电源会降频  
@@ -33,6 +33,8 @@ main是交互页面
 sg是逻辑页面  
 requirements里是依赖包  
 cd 到requirements.txt所在目录下执行：pip install -r requirements.txt  
+具体的依赖（虚拟环境）安装方法可参考下面的文档：  
+https://www.yuque.com/u39067637/maezfz/mq6euk08x1gybptc?singleDoc# 《Windows系统中在pycharm中使用virtualenv创建虚拟环境》  
 记得修改源为国内源  
 最后直接运行main即可  
   
