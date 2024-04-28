@@ -26,7 +26,7 @@
 ### 1.下载已经打包好的exe文件运行  
 
 百度网盘地址：[opencv贪吃蛇](https://pan.baidu.com/s/1rw7uLH-ReM5BjVyY-mQTzw?pwd=1565)  
-<span style="color:grey">___python文件打包方法我也写了一个文档:___</span>  
+___<font color=grey>python文件打包方法我也写了一个文档:</font>___  
 [使用pyinstaller打包conda虚拟环境下多文件的python程序](https://www.yuque.com/u39067637/maezfz/qqm6xavvkp00blyb?singleDoc#)  
  
 ### 2.拉取源码运行
