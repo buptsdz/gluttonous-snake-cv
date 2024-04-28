@@ -22,12 +22,31 @@
 
   
 ## 使用方法：  
-1. ### 下载已经打包好的exe游戏文件运行 
+
+### 1.下载已经打包好的exe文件运行  
+
 百度网盘地址：[opencv贪吃蛇](https://pan.baidu.com/s/1rw7uLH-ReM5BjVyY-mQTzw?pwd=1565)  
-<font color="grey">___python文件打包方法我也写了一个文档:___</font>  
-[使用pyinstaller打包conda虚拟环境下多文件的python程序](https://www.yuque.com/u39067637/maezfz/qqm6xavvkp00blyb?singleDoc#)
-<br>
-2. ### 拉取源码运行
+<span style="color:grey">___python文件打包方法我也写了一个文档:___</span>  
+[使用pyinstaller打包conda虚拟环境下多文件的python程序](https://www.yuque.com/u39067637/maezfz/qqm6xavvkp00blyb?singleDoc#)  
+ 
+### 2.拉取源码运行
+**目录结构：**  
+```
+├── main.py                     // 主循环函数  
+├── music.py                    // 音乐触发函数  
+├── sg.py                       // 逻辑处理函数
+├── requirements.txt            // 依赖库文件
+├── history.txt                 // 存储最高记录
+├── README.md                   // 说明文档
+├── musicpackegs                // 音乐包  
+│   ├── xxx.mp3                 // 各类音效  
+│   └── ·······                 
+├── photo                       // 图片素材
+│   ├── xxx.jpg
+│   ├── xxx.png  
+│   └── ·······
+└── .gitignore                  // 忽略文件 
+```
 python版本：
 ```
 python==3.9.16
