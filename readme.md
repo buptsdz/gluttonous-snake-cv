@@ -30,6 +30,7 @@ ___<font color=grey>python文件打包方法我也写了一个文档:</font>___
 [使用pyinstaller打包conda虚拟环境下多文件的python程序](https://www.yuque.com/u39067637/maezfz/qqm6xavvkp00blyb?singleDoc#)  
  
 ### 2.拉取源码运行
+___**<font color=red>注意：文件路径下不要有中文,否则无法运行</font>**___  
 **目录结构：**  
 ```
 ├── main.py                     // 主循环函数  
