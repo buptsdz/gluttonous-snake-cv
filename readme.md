@@ -48,21 +48,20 @@ ___**<font color=red>注意：文件路径下不要有中文,否则无法运行<
 │   └── ·······
 └── .gitignore                  // 忽略文件 
 ```
-python版本：
+#### 虚拟环境和依赖：  
+``` bash
+conda create -n tanchishe python=3.9 #创建环境
+conda activate tanchishe             #激活环境
+pip install -r requirements.txt      #安装依赖
 ```
-python==3.9.16
-```
+
 运行的话最好接电源，本项目吃cpu，不接电源会降频  
 main是交互页面  
 sg是逻辑页面  
 requirements里是依赖库  
-cd 到requirements.txt所在目录下执行：  
-```
-pip install -r requirements.txt
-```
+
 具体的依赖（虚拟环境）安装方法可参考下面的文档：  
-[Windows系统中在pycharm中使用virtualenv创建虚拟环境](https://www.yuque.com/u39067637/maezfz/mq6euk08x1gybptc?singleDoc#)  
-记得修改源为国内源  
+**[conda虚拟环境管理](https://www.yuque.com/u39067637/maezfz/syzlisxdbqmp7k6s)**  
 最后直接运行main即可  
   
 ## 玩法说明： 
