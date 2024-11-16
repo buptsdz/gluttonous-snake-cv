@@ -1,5 +1,6 @@
 import cv2
-#from cvzone.HandTrackingModule import HandDetector
+
+# from cvzone.HandTrackingModule import HandDetector
 import tkinter as tk
 from PIL import Image, ImageTk, ImageSequence
 import time

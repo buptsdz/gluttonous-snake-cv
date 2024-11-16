@@ -12,7 +12,7 @@ from shapely.geometry import LineString
 class SnakeGameClass:
     def __init__(self, pathfoods, head):  # 构造函数
         self.points = []  # 蛇的所有点
-        self.lengths = []  # distance between each point
+        self.lengths = []  # 每个点之间距离
         self.currentlength = 0  # 蛇总长度
         self.allowedlength = 600  # 允许的总长度
         self.previoushead = 0, 0  # 上一时刻蛇头
@@ -73,7 +73,7 @@ class SnakeGameClass:
 
     def reset_game(self):
         self.points = []  # 蛇的所有点
-        self.lengths = []  # distance between each point
+        self.lengths = []  # 每个点之间距离
         self.currentlength = 0  # 蛇总长度
         self.allowedlength = 600  # 允许的总长度
         self.previoushead = 0, 0  # 上一时刻蛇头
@@ -94,7 +94,7 @@ class SnakeGameClass:
         self.currentlength += distance  # 计算当前长度
         self.previoushead = cx, cy  # 更新蛇头位置
 
-        # draw snake
+        # 绘制蛇身
         if self.points:
             for i, point in enumerate(self.points):
                 if i != 0:  # 如果当前点不是第一个点
@@ -104,7 +104,7 @@ class SnakeGameClass:
 
             cv2.circle(imgmain, self.points[-1], 20, (200, 0, 200), cv2.FILLED)
 
-        # length reduction
+        # 蛇身移动
         if self.currentlength > self.allowedlength:
             for i, length in enumerate(self.lengths):
                 self.currentlength -= length
@@ -129,7 +129,7 @@ class SnakeGameClass:
         self.currentlength += distance  # 计算当前长度
         self.previoushead = cx, cy  # 更新蛇头位置
 
-        # draw snake
+        # 绘制蛇身
         if self.points:
             for i, point in enumerate(self.points):
                 if i != 0:  # 如果当前点不是第一个点
@@ -139,7 +139,7 @@ class SnakeGameClass:
 
             cv2.circle(imgmain, self.points[-1], 20, (200, 0, 200), cv2.FILLED)
 
-        # length reduction
+        # 蛇身移动
         if self.currentlength > self.allowedlength:
             for i, length in enumerate(self.lengths):
                 self.currentlength -= length
@@ -164,7 +164,7 @@ class SnakeGameClass:
         self.currentlength += distance  # 计算当前长度
         self.previoushead = cx, cy  # 更新蛇头位置
 
-        # draw snake
+        # 绘制蛇身
         if self.points:
             for i, point in enumerate(self.points):
                 if i != 0:  # 如果当前点不是第一个点
@@ -174,7 +174,7 @@ class SnakeGameClass:
 
             cv2.circle(imgmain, self.points[-1], 20, (200, 0, 200), cv2.FILLED)
 
-        # length reduction
+        # 蛇身移动
         if self.currentlength > self.allowedlength:
             for i, length in enumerate(self.lengths):
                 self.currentlength -= length
@@ -223,7 +223,7 @@ class SnakeGameClass:
 
     def update(self, imgmain, currenthead):
         if self.gameover == True:
-            # draw snake
+            # 绘制蛇身
             head_width = self.imghead.shape[1]
             head_height = self.imghead.shape[0]
             for i, point in enumerate(self.points):
@@ -269,7 +269,7 @@ class SnakeGameClass:
             self.currentlength += distance  # 计算当前长度
             self.previoushead = cx, cy  # 更新蛇头位置
 
-            # length reduction
+            # 长度减小
             if self.currentlength > self.allowedlength:
                 for i, length in enumerate(self.lengths):
                     self.currentlength -= length
@@ -278,7 +278,7 @@ class SnakeGameClass:
                     if self.currentlength < self.allowedlength:
                         break
 
-            # check if snake eats the food
+            # 检查是否吃到食物
             rx, ry = self.foodpoint
             if (
                 rx - self.wfood // 2 < cx < rx + self.wfood // 2
@@ -300,7 +300,7 @@ class SnakeGameClass:
                     thread.start()
                 print(self.score)
 
-            # draw snake
+            # 绘制蛇身
             head_width = self.imghead.shape[1]
             head_height = self.imghead.shape[0]
             if self.points:
@@ -320,7 +320,7 @@ class SnakeGameClass:
                         imgmain, self.imghead, (start_x, start_y)
                     )
 
-            # draw food
+            # 绘制食物
             rx, ry = self.foodpoint  # random food x,y
             imgmain = cvzone.overlayPNG(
                 imgmain, self.selected_img, (rx - self.wfood // 2, ry - self.hfood // 2)
